@@ -8,7 +8,7 @@ Terraform module to manage AWS account password policy
 |------|-------------|:----:|:-----:|:-----:|
 | account\_alias | Name of the IAM account alias | string | `""` | no |
 | allow\_users\_to\_change\_password | Whether to allow users to change their own password | string | `"true"` | no |
-| create\_iam\_account | Controls whether to configure the IAM account settings | string | `"false"` | no |
+| create\_iam\_account | Controls whether to configure the IAM account settings | string | `"true"` | no |
 | hard\_expiry | Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset) | string | `"false"` | no |
 | max\_password\_age | The number of days that an user password is valid | string | `"90"` | no |
 | minimum\_password\_length | Minimum length to require for user passwords | string | `"14"` | no |
