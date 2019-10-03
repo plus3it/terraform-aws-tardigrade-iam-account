@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+### 1.0.2
+
+**Released**: 2019.10.03
+
+**Commit Delta**: [Change from 1.0.1 release](https://github.com/plus3it/terraform-aws-tardigrade-iam-account/compare/1.0.1...1.0.2)
+
+**Summary**:
+
+*   Update testing harness to have a more user-friendly output
+
 ### 1.0.1
 
 **Released**: 2019.09.23
