@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+### 1.0.5
+
+**Released**: 2020.02.05
+
+**Commit Delta**: [Change from 1.0.4 release](https://github.com/plus3it/terraform-aws-tardigrade-iam-account/compare/1.0.4...1.0.5)
+
+**Summary**:
+
+*   Adds Access Analyzer resource
+
 ### 1.0.4
 
 **Released**: 2019.10.28
