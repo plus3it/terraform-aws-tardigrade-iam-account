@@ -17,13 +17,13 @@ variable "account_alias" {
 }
 
 variable "analyzer_name" {
-  description = "(Required) Name of the Analyzer."
+  description = "Name of the Analyzer."
   type        = string
   default     = "AccountAnalyzer"
 }
 
 variable "analyzer_type" {
-  description = "(Optional) Type of Analyzer. Valid value is currently only ACCOUNT. Defaults to ACCOUNT."
+  description = "Type of Analyzer. Valid value is currently only ACCOUNT. Defaults to ACCOUNT."
   type        = string
   default     = "ACCOUNT"
 }
