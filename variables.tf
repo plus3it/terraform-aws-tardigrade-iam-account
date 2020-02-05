@@ -4,10 +4,28 @@ variable "create_iam_account" {
   default     = true
 }
 
+variable "create_accessanalyzer" {
+  description = "Controls whether to configure the IAM Access Analyzer"
+  type        = bool
+  default     = false
+}
+
 variable "account_alias" {
   description = "Name of the IAM account alias"
   type        = string
   default     = ""
+}
+
+variable "analyzer_name" {
+  description = "(Required) Name of the Analyzer."
+  type        = string
+  default     = "AccountAnalyzer"
+}
+
+variable "analyzer_type" {
+  description = "(Optional) Type of Analyzer. Valid value is currently only ACCOUNT. Defaults to ACCOUNT."
+  type        = string
+  default     = "ACCOUNT"
 }
 
 variable "allow_users_to_change_password" {
@@ -64,3 +82,8 @@ variable "require_symbols" {
   default     = true
 }
 
+variable "tags" {
+  description = "A map of tags to add to the module resources"
+  type        = map
+  default     = {}
+}
