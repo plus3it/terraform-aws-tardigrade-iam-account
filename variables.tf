@@ -7,7 +7,7 @@ variable "create_iam_account" {
 variable "create_accessanalyzer" {
   description = "Controls whether to configure the IAM Access Analyzer"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "account_alias" {
