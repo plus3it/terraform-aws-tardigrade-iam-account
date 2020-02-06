@@ -14,7 +14,7 @@ update_configs:
     directory: "/tests/no_iam_account"
     update_schedule: "daily"
 
-    - package_manager: "terraform"
+  - package_manager: "terraform"
     directory: "/tests/use_all_variables"
     update_schedule: "daily"
 
