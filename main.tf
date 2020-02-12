@@ -7,6 +7,14 @@ resource "aws_iam_account_alias" "this" {
   account_alias = var.account_alias
 }
 
+resource "aws_accessanalyzer_analyzer" "this" {
+  count = var.create_iam_account && var.create_accessanalyzer ? 1 : 0
+
+  analyzer_name = var.analyzer_name
+  type          = var.analyzer_type
+  tags          = var.tags
+}
+
 resource "aws_iam_account_password_policy" "this" {
   count = var.create_iam_account ? 1 : 0
 
@@ -20,4 +28,3 @@ resource "aws_iam_account_password_policy" "this" {
   require_numbers                = var.require_numbers
   require_symbols                = var.require_symbols
 }
-
