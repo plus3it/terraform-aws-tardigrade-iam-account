@@ -4,6 +4,12 @@ Terraform module to manage AWS account password policy
 
 
 <!-- BEGIN TFDOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+
 ## Providers
 
 | Name | Version |
@@ -13,7 +19,7 @@ Terraform module to manage AWS account password policy
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | account\_alias | Name of the IAM account alias | `string` | `""` | no |
 | allow\_users\_to\_change\_password | Whether to allow users to change their own password | `bool` | `true` | no |
 | analyzer\_name | Name of the Analyzer. | `string` | `"AccountAnalyzer"` | no |
