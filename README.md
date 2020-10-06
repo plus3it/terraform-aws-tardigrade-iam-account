@@ -25,7 +25,6 @@ Terraform module to manage AWS account password policy
 | analyzer\_name | Name of the Analyzer. | `string` | `"AccountAnalyzer"` | no |
 | analyzer\_type | Type of Analyzer. Valid value is currently only ACCOUNT. Defaults to ACCOUNT. | `string` | `"ACCOUNT"` | no |
 | create\_accessanalyzer | Controls whether to configure the IAM Access Analyzer | `bool` | `true` | no |
-| create\_iam\_account | Controls whether to configure the IAM account settings | `bool` | `true` | no |
 | hard\_expiry | Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset) | `bool` | `false` | no |
 | max\_password\_age | The number of days that an user password is valid | `string` | `"90"` | no |
 | minimum\_password\_length | Minimum length to require for user passwords | `string` | `"14"` | no |

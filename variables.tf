@@ -1,9 +1,3 @@
-variable "create_iam_account" {
-  description = "Controls whether to configure the IAM account settings"
-  type        = bool
-  default     = true
-}
-
 variable "create_accessanalyzer" {
   description = "Controls whether to configure the IAM Access Analyzer"
   type        = bool

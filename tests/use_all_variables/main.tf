@@ -9,7 +9,6 @@ module "create_iam_account" {
     aws = aws
   }
 
-  create_iam_account             = true
   account_alias                  = "4b11c890088301dfcd760b9b3539371b"
   allow_users_to_change_password = false
   hard_expiry                    = true
