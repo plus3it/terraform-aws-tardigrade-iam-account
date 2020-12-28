@@ -78,6 +78,6 @@ variable "require_symbols" {
 
 variable "tags" {
   description = "A map of tags to add to the module resources"
-  type        = map
+  type        = map(any)
   default     = {}
 }
