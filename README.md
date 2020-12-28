@@ -33,7 +33,7 @@ Terraform module to manage AWS account password policy
 | require\_numbers | Whether to require numbers for user passwords | `bool` | `true` | no |
 | require\_symbols | Whether to require symbols for user passwords | `bool` | `true` | no |
 | require\_uppercase\_characters | Whether to require uppercase characters for user passwords | `bool` | `true` | no |
-| tags | A map of tags to add to the module resources | `map` | `{}` | no |
+| tags | A map of tags to add to the module resources | `map(any)` | `{}` | no |
 
 ## Outputs
 
