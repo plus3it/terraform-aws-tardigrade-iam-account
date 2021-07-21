@@ -1,13 +1,5 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
 module "create_iam_account" {
   source = "../../"
-
-  providers = {
-    aws = aws
-  }
 
   account_alias                  = "4b11c890088301dfcd760b9b3539371b"
   allow_users_to_change_password = false
