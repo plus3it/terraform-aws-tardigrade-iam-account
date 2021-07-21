@@ -21,7 +21,7 @@ jobs:
   include:
     - stage: lint
       name: Project Syntax Verification
-      script: make && make docker/run target=lint
+      script: make docker/run target=lint
     - stage: test
       name: Apply Terraform test configs in mockstack
       install:
