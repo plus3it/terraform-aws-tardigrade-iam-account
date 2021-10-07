@@ -4,7 +4,7 @@ Terraform module to manage AWS account password policy
 
 ## Testing
 
-At the moment, testing is manual:
+Manual testing:
 
 Note:  This test should be run in an account that doesn't already have an
 existing AccessAnalyzer.
@@ -13,6 +13,12 @@ existing AccessAnalyzer.
 # Replace "xxx" with an actual AWS profile, then execute the integration tests.
 export AWS_PROFILE=xxx 
 make terraform/pytest PYTEST_ARGS="-v --nomock"
+```
+
+For automated testing, PYTEST_ARGS is optional and no profile is needed:
+
+```
+make terraform/pytest PYTEST_ARGS="-v"
 ```
 
 <!-- BEGIN TFDOCS -->
