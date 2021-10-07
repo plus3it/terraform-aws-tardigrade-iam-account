@@ -6,6 +6,9 @@ Terraform module to manage AWS account password policy
 
 At the moment, testing is manual:
 
+Note:  This test should be run in an account that doesn't already have an
+existing AccessAnalyzer.
+
 ```
 # Replace "xxx" with an actual AWS profile, then execute the integration tests.
 export AWS_PROFILE=xxx 
