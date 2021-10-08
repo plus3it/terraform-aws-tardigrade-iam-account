@@ -6,12 +6,12 @@ updates:
     interval: daily
   open-pull-requests-limit: 10
 - package-ecosystem: terraform
-  directory: "/tests/create_iam_account"
+  directory: "/tests/create_accessanalyzer"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
 - package-ecosystem: terraform
-  directory: "/tests/no_iam_account"
+  directory: "/tests/create_iam_account"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
@@ -22,16 +22,6 @@ updates:
   open-pull-requests-limit: 10
 - package-ecosystem: docker
   directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: pip
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: gomod
-  directory: "/tests"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
