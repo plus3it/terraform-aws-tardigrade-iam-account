@@ -1,83 +1,39 @@
-variable "create_accessanalyzer" {
-  description = "Controls whether to configure the IAM Access Analyzer"
-  type        = bool
-  default     = true
+variable "access_analyzer" {
+  description = "Object of attributes for an IAM Access Analyzier"
+  type = object({
+    name = optional(string, "AccountAnalyzer")
+    type = optional(string, "ACCOUNT")
+    tags = optional(map(string))
+
+    configuration = optional(object({
+      unused_access = object({
+        unused_access_age = number
+      })
+    }))
+  })
+  default = {}
 }
 
 variable "account_alias" {
-  description = "Name of the IAM account alias"
-  type        = string
-  default     = ""
+  description = "Object of attributes for the IAM account alias"
+  type = object({
+    name = string
+  })
+  default = null
 }
 
-variable "analyzer_name" {
-  description = "Name of the Analyzer."
-  type        = string
-  default     = "AccountAnalyzer"
-}
-
-variable "analyzer_type" {
-  description = "Type of Analyzer. Valid value is currently only ACCOUNT. Defaults to ACCOUNT."
-  type        = string
-  default     = "ACCOUNT"
-}
-
-variable "allow_users_to_change_password" {
-  description = "Whether to allow users to change their own password"
-  type        = bool
-  default     = true
-}
-
-variable "hard_expiry" {
-  description = "Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)"
-  type        = bool
-  default     = false
-}
-
-variable "minimum_password_length" {
-  description = "Minimum length to require for user passwords"
-  type        = string
-  default     = "14"
-}
-
-variable "max_password_age" {
-  description = "The number of days that an user password is valid"
-  type        = string
-  default     = "90"
-}
-
-variable "password_reuse_prevention" {
-  description = "The number of previous passwords that users are prevented from reusing"
-  type        = string
-  default     = "24"
-}
-
-variable "require_lowercase_characters" {
-  description = "Whether to require lowercase characters for user passwords"
-  type        = bool
-  default     = true
-}
-
-variable "require_uppercase_characters" {
-  description = "Whether to require uppercase characters for user passwords"
-  type        = bool
-  default     = true
-}
-
-variable "require_numbers" {
-  description = "Whether to require numbers for user passwords"
-  type        = bool
-  default     = true
-}
-
-variable "require_symbols" {
-  description = "Whether to require symbols for user passwords"
-  type        = bool
-  default     = true
-}
-
-variable "tags" {
-  description = "A map of tags to add to the module resources"
-  type        = map(any)
-  default     = {}
+variable "password_policy" {
+  description = "Object of attributes for the IAM account password policy"
+  type = object({
+    allow_users_to_change_password = optional(bool, true)
+    hard_expiry                    = optional(bool, false)
+    max_password_age               = optional(string, "90")
+    minimum_password_length        = optional(string, "14")
+    password_reuse_prevention      = optional(string, "24")
+    require_lowercase_characters   = optional(bool, true)
+    require_numbers                = optional(bool, true)
+    require_symbols                = optional(bool, true)
+    require_uppercase_characters   = optional(bool, true)
+  })
+  default = {}
 }
