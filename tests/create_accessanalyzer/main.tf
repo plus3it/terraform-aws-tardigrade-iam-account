@@ -1,7 +1,11 @@
-module "create_iam_account" {
+module "create_accessanalyzer" {
   source = "../../"
 
-  create_accessanalyzer = true
-  analyzer_name         = "AccessAnalyzer"
-  analyzer_type         = "ACCOUNT"
+  account_alias   = null
+  password_policy = null
+
+  access_analyzer = {
+    name = "AccessAnalyzer"
+    type = "ACCOUNT"
+  }
 }
